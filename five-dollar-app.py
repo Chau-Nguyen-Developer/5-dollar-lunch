@@ -14,6 +14,18 @@ def hello():
     name = request. args.get("name", "Flask")
     return f"Hello,{escape(name)} !"
 
+@app.route('/user/<username>')
+def show_user_profile(username):
+    return f'User {escape(username)}'
+
+@app.route('/about')
+def about():
+    return 'The About Page'
+
+@app.route('/projects')
+def projects():
+    return "The Projects Page"
+    
 # data = [
 #     {
 #         "name" : "Subway",
