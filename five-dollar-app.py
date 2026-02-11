@@ -26,30 +26,39 @@ def about():
 def projects():
     return "The Projects Page"
     
-# data = [
-#     {
-#         "name" : "Subway",
-#         "price": 8.99
-#     },
-#     {
-#         "name": "Starbucks",
-#         "price": 4.99
-#     },
-#     {
-#         "name": "Roundtable Pizza",
-#         "price": 5.99
-#     },
-#     {
-#         "name": "Panda Express",
-#         "price": 10.99
-#     },
-# ]
+data = [
+    {
+        "name" : "Spiral Notebook",
+        "price": 3.39
+    },
+    {
+        "name": "Monthly Calendar",
+        "price": 6.99
+    },
+    {
+        "name": "Papermate Pens",
+        "price": 4.89
+    },
+    {
+        "name": "Post-it Sticky Notes",
+        "price": 10.99
+    },
+    {
+        "name": "Letter-Size Paper",
+        "price": 5.79
+    },
+    {
+        "name": "Paper folder",
+        "price": 1.89
+    },
+]
+@app.route('/<budget>')
+def search_gift_items(budget):
+    result = []
+    for gift in data:
+        if gift['price'] <= budget+2:
+            result.append(gift)
+    return result
 
-# def search_food_items(budget):
-#     result = []
-#     for food in data:
-#         if food['price'] <= budget+2:
-#             result.append(food)
-#     return result
+print(search_gift_items(10))
 
-# print(search_food_items(10))
