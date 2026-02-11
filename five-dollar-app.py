@@ -12,11 +12,11 @@ def hello_world():
 @app.route("/hello")
 def hello():
     name = request. args.get("name", "Flask")
-    return f"Hello,{escape(name)} !"
+    return f"Hello, {escape(name)} !"
 
 @app.route('/user/<username>')
 def show_user_profile(username):
-    return f'User {escape(username)}'
+    return f'Hello User {escape(username)}. Enjoy the Full-Stack Dev.'
 
 @app.route('/about')
 def about():
@@ -25,7 +25,11 @@ def about():
 @app.route('/projects')
 def projects():
     return "The Projects Page"
-    
+
+@app.route('/welcome')
+def welcome():
+    return "Welcome to Five-Dollar-Office-Gift"
+
 data = [
     {
         "name" : "Spiral Notebook",
@@ -52,12 +56,15 @@ data = [
         "price": 1.89
     },
 ]
-@app.route('/<budget>')
+@app.route('/search/<budget>')
 def search_gift_items(budget):
+    # The given budget is a string. We have to convert it to float data type. 
+    budget = float(budget)
     result = []
     for gift in data:
         if gift['price'] <= budget+2:
             result.append(gift)
+    print (result)
     return result
 
 print(search_gift_items(10))
