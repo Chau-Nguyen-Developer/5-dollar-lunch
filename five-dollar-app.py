@@ -28,7 +28,7 @@ def projects():
 
 @app.route('/welcome')
 def welcome():
-    return "Welcome to Five-Dollar-Office-Gift"
+    return "<html><body><h1>Welcome to Five-Dollar-Office-Gift</h1></body></html>"
 
 data = [
     {
