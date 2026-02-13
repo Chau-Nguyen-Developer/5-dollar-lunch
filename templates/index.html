@@ -9,6 +9,8 @@
             function search()
             {
                 console.log("Button is clicked.");
+                var budget = $("#budget_input").val();
+                console.log("My budget: " + budget);
             }
             //2. Call the backend server URL /search/<budget> to get the result. 
 
@@ -20,7 +22,7 @@
 
     <body>
         <h2>Welcome to 5-Dollar Giftshop. Dedicated for office work.</h2>
-        <input type="text">
+        <input type="text" id="budget_input">
         <button onclick="search()">Search</button>
     </body>
 
