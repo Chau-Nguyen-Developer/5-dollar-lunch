@@ -6,16 +6,17 @@ from markupsafe import escape
 app = Flask(__name__)
 
 @app.route("/")
+@app.route("/home")
 def home():
     return render_template('index.html')
-    
+
 # def hello_world():
 #     return "<p>Hello, world!</p>"
 
-@app.route("/hello")
-def hello():
-    name = request. args.get("name", "Flask")
-    return f"Hello, {escape(name)} !"
+# @app.route("/hello")
+# def hello():
+#     name = request. args.get("name", "Flask")
+#     return f"Hello, {escape(name)} !"
 
 @app.route('/user/<username>')
 def show_user_profile(username):
