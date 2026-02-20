@@ -1,0 +1,3 @@
+To run preview HTML file on browswer: press fn key with F1 to trigger F1. 
+To run Flask application: flask --app <app-name> run --debug 
+(a http link will show up)
