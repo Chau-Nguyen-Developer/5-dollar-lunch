@@ -18,17 +18,17 @@ def home():
 #     name = request. args.get("name", "Flask")
 #     return f"Hello, {escape(name)} !"
 
-@app.route('/user/<username>')
-def show_user_profile(username):
-    return f'Hello User {escape(username)}. Enjoy the Full-Stack Dev.'
+# @app.route('/user/<username>')
+# def show_user_profile(username):
+#     return f'Hello User {escape(username)}. Enjoy the Full-Stack Dev.'
 
-@app.route('/about')
-def about():
-    return 'The About Page'
+# @app.route('/about')
+# def about():
+#     return 'The About Page'
 
-@app.route('/projects')
-def projects():
-    return "The Projects Page"
+# @app.route('/projects')
+# def projects():
+#     return "The Projects Page"
 
 @app.route('/welcome')
 def welcome():
