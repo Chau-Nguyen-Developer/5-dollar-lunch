@@ -16,17 +16,19 @@
             
             $.ajax(
                 {
-                    url: "/search/" + budget,
+                    url: "/search/${encodeURIComponent(budget)}", //e.g. /search/500
                     method: "GET",
-                    dataType: "json",
-                    success: function(response) 
+                    dataType: "json", //we expect JSON back
+                    success: function(data) 
                     {
-                        console.log("Success:", response);
-                        $("#result").html(JSON.stringify(response));
+                        console.log("Success:", data);
+                        // To do: render results to page 
+
+                        // $("#result").html(JSON.stringify(response));
                     },
                     error: function(xhr, status, error) 
                     {
-                        console.error("Error:", error);
+                        console.error("Error:", status, error, xhr.responseText);
                         $("#result").html("Something went wrong.");
                     }
                 });
