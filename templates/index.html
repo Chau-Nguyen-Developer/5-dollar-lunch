@@ -16,7 +16,7 @@
             
             $.ajax(
                 {
-                    url: "/search/${encodeURIComponent(budget)}", //e.g. /search/500
+                    url: `/search/${encodeURIComponent(budget)}`, //e.g. /search/500
                     method: "GET",
                     dataType: "json", //we expect JSON back
                     success: function(data) 
