@@ -13,7 +13,10 @@
                 console.log("My budget: " + budget);
             
             //2. Call the backend server URL /search/<budget> to get the result. 
-            
+
+            // AJAX : "Asynchronous JavaScript and XML" is a set of web development techniques that 
+            // allows web pages to communicate with a server in the background 
+            // and update content dynamically without reloading the entire page
             $.ajax(
                 {
                     url: `/search/${encodeURIComponent(budget)}`, //e.g. /search/500
@@ -23,7 +26,12 @@
                     {
                         console.log("Success:", data);
 
-                        // To do: render results to page 
+                        // TO DO: render results to page
+
+                        // Clear the previous result whenever do a new call. 
+                        $("#result_list").empty();
+                        
+                        //Use for loop to print out each element of the new call. 
                         for(var i = 0; i < data.length; ++i)
                         {
                             console.log("Test: " + data[i].name);
