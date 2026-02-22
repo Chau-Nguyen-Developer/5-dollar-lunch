@@ -22,13 +22,19 @@
                     success: function(data) 
                     {
                         console.log("Success:", data);
+
                         // To do: render results to page 
-                        // $("#result").html(JSON.stringify(response));
+                        for(var i = 0; i < data.length; ++i)
+                        {
+                            console.log("Test: " + data[i].name);
+                            console.log("Test: " + data[i].price);
+                            $("#result_list").append("<li>" + data[i].name + ": " + data[i].price + "</li>");
+                        }
                     },
                     error: function(xhr, status, error) 
                     {
                         console.error("Error:", status, error, xhr.responseText);
-                        $("#result").html("Something went wrong.");
+                        $("#data").html("Something went wrong.");
                     }
                 });
             }
@@ -43,6 +49,9 @@
         <h2>Welcome to 5-Dollar Giftshop. Dedicated for office work.</h2>
         <input type="text" id="budget_input">
         <button onclick="search()">Search</button>
+        <ul id="result_list">
+
+        </ul>
     </body>
 
 </html>
