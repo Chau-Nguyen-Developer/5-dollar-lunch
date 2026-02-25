@@ -84,11 +84,11 @@ html,body { height: 100%; margin: 0; padding: 0; font-family: var(--font-sans); 
   display:flex;
   gap: 12px;
   align-items: center;
-  background: linear-gradient(180deg, rgba(246,247,249,0.8), rgba(255,255,255,0.6));
+  background: linear-gradient(180deg, rgba(165, 196, 253, 0.8), rgba(220, 1, 1, 0.274));
   padding: 14px;
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(15,20,30,0.03);
+  border: 1px solid rgba(0, 0, 0, 0.944);
 }
 
 /* Input styling */
@@ -98,11 +98,11 @@ html,body { height: 100%; margin: 0; padding: 0; font-family: var(--font-sans); 
   padding: 12px 14px;
   font-size: 0.98rem;
   border-radius: 10px;
-  border: 1px solid rgba(15,20,30,0.06);
-  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(27, 65, 140, 0.564);
+  background: rgba(200, 12, 12, 0.333);
   outline: none;
   transition: box-shadow var(--transition), border-color var(--transition);
-  box-shadow: 0 1px 0 rgba(15,20,30,0.02);
+  box-shadow: 0 1px 0 rgba(8, 80, 225, 0.818);
 }
 
 .search-row input::placeholder { color: #9aa3b2; font-weight: 300; }
@@ -119,11 +119,11 @@ html,body { height: 100%; margin: 0; padding: 0; font-family: var(--font-sans); 
   padding: 10px 16px;
   border-radius: 10px;
   background: linear-gradient(180deg, var(--accent), var(--accent-2));
-  color: white;
+  color: rgb(240, 122, 122);
   font-weight: 600;
   cursor: pointer;
   transition: transform var(--transition), box-shadow var(--transition), opacity var(--transition);
-  box-shadow: 0 6px 18px rgba(15,98,254,0.14);
+  box-shadow: 0 6px 18px rgba(80, 106, 155, 0.615);
   min-width: 96px;
 }
 
@@ -134,10 +134,10 @@ html,body { height: 100%; margin: 0; padding: 0; font-family: var(--font-sans); 
 /* Results card */
 .results {
   margin-top: 4px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(250,250,251,0.9));
+  background: linear-gradient(180deg, rgba(191, 30, 30, 0.408), rgba(146, 146, 239, 0.852));
   padding: 18px;
   border-radius: 12px;
-  border: 1px solid rgba(15,20,30,0.03);
+  border: 1px solid rgb(15, 20, 30);
   box-shadow: var(--shadow-sm);
 }
 
@@ -162,10 +162,10 @@ html,body { height: 100%; margin: 0; padding: 0; font-family: var(--font-sans); 
   justify-content: space-between;
   gap: 12px;
   padding: 10px 12px;
-  background: linear-gradient(180deg, rgba(248,249,250,1), rgba(255,255,255,1));
+  background: linear-gradient(180deg, rgb(55, 142, 229), rgb(231, 31, 31));
   border-radius: 10px;
-  border: 1px solid rgba(15,20,30,0.03);
-  box-shadow: 0 2px 6px rgba(16,24,40,0.02);
+  border: 1px solid rgba(93, 127, 196, 0.937);
+  box-shadow: 0 2px 6px rgb(154, 179, 228);
   font-size: 0.98rem;
   align-items: center;
   transition: transform var(--transition), box-shadow var(--transition);
@@ -173,7 +173,7 @@ html,body { height: 100%; margin: 0; padding: 0; font-family: var(--font-sans); 
 
 #result_list li:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(16,24,40,0.06);
+  box-shadow: 0 12px 30px rgba(111, 147, 220, 0.975);
 }
 
 #result_list li::marker { /* no native bullets */ content: ""; }
