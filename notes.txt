@@ -13,3 +13,23 @@ MongoDB hosted in the cloud. Just show the basic read and write example.
 Keep the example super simple and concise.  
 
 Ideas for later: able to search with name as well. Use regex? 
+
+## FIND ALL DOCUMENTS WHERE THE "PRICE" FIELD IS LESS THAN OR EQUAL TO BUDGET
+for item in collection.find({"price": {"$lte": budget}}):
+  ....
+^^ explaining for the above: 
+collection.find(...) - queires the MongoDB collection and returns all the documents matching the filter inside. 
+Normal use case: pass in a direct value
+{"price":"3.5"}
+Special use case: Use comparison operator to compare with a parameter
+{"$lte": budget} 
+
+for item in collection.find({"price":{"gt": 10}})
+$lte: <=
+$lt: <
+$gte: >=
+$gt: >
+$eq: ==
+$ne: !=
+
+
