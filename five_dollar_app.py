@@ -81,5 +81,7 @@ def search_gift_items(budget):
         
     return jsonify(result)
 
-
+# Include these two lines to be able to run from python five_dollar_app.py
+if __name__ == "__main__":
+    app.run(debug=True)
 
